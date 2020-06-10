@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="month">
+    <input type="submit" value="Tính số ngày" onclick="tinhngay()"; >
+</form>
+<script>
+    function tinhngay() {
+        var thang = document.getElementById("month").value;
+        var tsn = Number(thang)
+        switch (tsn) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write(" Tháng " + tsn + " có 31 ngày ");
+                break;
+             case 6:
+             case 10:
+             case 11:
+                 document.write(" Tháng " + tsn + " có 30 ngày ");
+                 break;
+             case 2:
+                 document.write(" Tháng " + tsn + " có 28 hoặc 29 ngày ");
+                 break;
+             default:
+                 document.write(" Mời bạn nhập lại");
+        }
+    }
+
+
+</script>
+</body>
+</html>
